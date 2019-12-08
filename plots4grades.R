@@ -55,7 +55,7 @@ boxGrades <- function(
     
     boxplot(grades, col = box.col,ylim=yrange, notch=notch, frame=FALSE,...)
     
-    points(median(ea),pch=med.pch,cex=2,col=scales::alpha(med.col,0.4))
+    points(median(grades),pch=med.pch,cex=2,col=scales::alpha(med.col,0.4))
     points(mean(grades),pch=mean.pch,cex=2,col=scales::alpha(mean.col,0.4))
     legend("topright",legend = c("median","mean"),bty="n", pch=c(med.pch,mean.pch),
            text.col = c(med.col,mean.col),col=c(med.col,mean.col), cex=1.5)
