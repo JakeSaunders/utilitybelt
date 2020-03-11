@@ -1,6 +1,6 @@
 # utilitybelt
 
-A place to store usefull scripts
+A place to store usefull scripts and personalized functions
 
    ________________.----------.________________
   |                | /(_M_)\  |            \   |
