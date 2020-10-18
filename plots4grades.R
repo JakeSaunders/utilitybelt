@@ -1,3 +1,14 @@
+# assign letter grades
+
+leter <- function(
+    num.grades,
+    range = c(110,94.0,90.0,86.7,83.4,80.0,76.7,73.4,70.0,66.7,63.4,60.0,0),
+    letters = c("F ","D-","D ","D+","C-","C ","C+","B-","B ","B+","A-","A ")
+){
+    cut(num.grades, range, letters)
+}
+
+
 # histogram for grades
 histGrades <- function(
     grades,
@@ -57,8 +68,8 @@ boxGrades <- function(
     
     points(median(grades),pch=med.pch,cex=2,col=scales::alpha(med.col,0.4))
     points(mean(grades),pch=mean.pch,cex=2,col=scales::alpha(mean.col,0.4))
-    legend("topright",legend = c("median","mean"),bty="n", pch=c(med.pch,mean.pch),
-           text.col = c(med.col,mean.col),col=c(med.col,mean.col), cex=1.5)
+    legend("bottomleft",legend = c("median","mean"),bty="n", pch=c(med.pch,mean.pch),
+            text.col = c(med.col,mean.col),col=c(med.col,mean.col), cex=1)
     
     text(x = .5,y=ABCDF,labels = c("A","B","C","D","F"))
     abline(h = lims,lty=3,lwd=2,col="azure3")
@@ -67,4 +78,5 @@ boxGrades <- function(
     stripchart(grades,col = scales::alpha(dot.col,0.4),pch=19,method = "jitter",
                vertical = T,add=T,cex=dot.cex)
 }
+
 
